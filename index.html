@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Course</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p v-if="showBooks">{{title}} - {{author}} - {{age}}</p>
+
+      <button v-on:click="age++">Increase Age</button>
+      <button v-on:click="age--">Decrease Age</button> <br><br>
+      <button @click="toggleInfo">
+        <span v-if="showBooks">Hide Books</span>
+        <span v-else>Show Books</span>
+      </button>
+      <p v-show="showBooks">Currently showing books</p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

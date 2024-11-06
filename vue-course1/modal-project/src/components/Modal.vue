@@ -3,6 +3,13 @@
         <div class="modal" :class="{ sale: theme === 'sale'}" >
             <h1>{{ header }}</h1>
             <p>{{text}}</p>
+            <div to="modals" class="actions">
+                <slot name="links"></slot>
+            </div>
+            <div>
+                <slot name="article"></slot>
+            </div>
+            <slot>default</slot>
         </div>
 
     </div>
@@ -30,6 +37,7 @@ export default {
     margin: 10px auto;
     background: white;
     border-radius: 10px;
+    text-align: center
 }
 
 .backdrop {
